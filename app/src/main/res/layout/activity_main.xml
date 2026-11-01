@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- EN-TÊTE -->
+        <TextView
+            android:id="@+id/tvTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titre"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sous_titre"
+            android:textSize="16sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="24dp" />
+
+        <!-- NOM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nom"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- PRÉNOM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prénom"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <EditText
+            android:id="@+id/etPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_prenom"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ÂGE (Clavier numérique) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Âge"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_age"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- GROUPE (Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Groupe"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+        <Spinner
+            android:id="@+id/spGroupe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/groupes"
+            android:layout_marginBottom="16dp" />
+
+                <!-- ESPACE DISPONIBLE -->
+        <TextView
+            android:id="@+id/tvPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Places restantes : G1 = 3 | G2 = 3 | G3 = 3"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+            
+        <!-- SUPPORT (RadioGroup) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Support de test"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+        <RadioGroup
+            android:id="@+id/rgSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbEmulateur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Émulateur"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rbTelephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <!-- CHECKBOX -->
+        <CheckBox
+            android:id="@+id/cbConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Je confirme les informations saisies"
+            android:layout_marginBottom="24dp" />
+
+        <!-- BOUTONS -->
+        <Button
+            android:id="@+id/btnAfficher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_afficher"
+            android:backgroundTint="#0F766E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnEffacer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_effacer"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:textColor="#0F766E"
+            android:layout_marginBottom="24dp" />
+
+            <!-- NOUVEAUX BOUTONS TP3 -->
+<Button
+    android:id="@+id/btnEnregistrer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_enregistrer"
+    android:backgroundTint="#7C3AED"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="12dp" />
+
+<Button
+    android:id="@+id/btnListe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_liste"
+    android:backgroundTint="#2563EB"
+    android:textColor="#FFFFFF"
+    android:layout_marginBottom="16dp" />
+
+
+<Button
+    android:id="@+id/btnSupprimer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Supprimer le participant"
+    android:backgroundTint="#DC2626"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp" />
+
+<Button
+    android:id="@+id/btnTransferer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Transférer vers…"
+    android:backgroundTint="#0F766E"
+    android:textColor="#FFFFFF"
+    android:layout_marginBottom="16dp" />
+
+    
+<TextView
+    android:id="@+id/tvCompteur"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Inscriptions : 0"
+    android:textStyle="bold"
+    android:textSize="16sp"
+    android:layout_marginBottom="16dp" />
+
+<TextView
+    android:id="@+id/tvCapacities"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:text="Places libres : G1=2 / G2=2 / G3=2"
+    android:textStyle="bold"
+    android:textSize="14sp"
+    android:layout_marginTop="8dp" />
+
+<TextView
+    android:id="@+id/tvFileAttente"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:text="Aucune attente"
+    android:textSize="13sp"
+    android:layout_marginBottom="12dp" />
+
+
+<EditText
+    android:id="@+id/etRecherche"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/hint_recherche"
+    android:inputType="textPersonName"
+    android:layout_marginBottom="8dp" />
+
+<Button
+    android:id="@+id/btnRechercher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_rechercher"
+    android:backgroundTint="#059669"
+    android:textColor="#FFFFFF"
+    android:layout_marginBottom="16dp" />
+
+        <!-- ZONE RÉSULTAT -->
+        <TextView
+            android:id="@+id/tvResultat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultat_initial"
+            android:background="#F3F4F6"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:minHeight="100dp" />
+
+    </LinearLayout>
+</ScrollView>
